@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARTOOLS</title>
+    <link rel="stylesheet" href="../css/main/header.css">
+    <link rel="stylesheet" href="../css/main/menu.css">
+    <link rel="stylesheet" href="../css/main/slideshow.css"> 
+    <link rel="stylesheet" href="../css/main/footer.css"> 
+    <link rel="stylesheet" href="../css/main/newProducts.css"> 
+
+  </head>
+
+  <body class="body">
+
+    <div class="header">
+      <div class="logo">
+        <img class="logoImage" src="../images/logo.png" alt="Logo" >
+      </div>
+      <div class="search">
+        <input class="searchText" type="text" placeholder="Search...">
+        <button class="searchButton" type="submit">
+          <img class="searchImage" src="../images/search.png" alt="Logo">
+        </button>
+      </div>
+      <div class="infoAccount">
+        <div class="favorites">
+          <button class="favoritesButton">
+            <img class="favoritesImage" src="../images/heart.png" alt="Logo">
+          </button>
+        </div>
+
+        <div class="cart">
+          <button class="cartButton">
+            <img class="favoritesImage" src="../images/cart.png" alt="Logo">
+          </button>
+        </div>
+        
+        <div class="customerSupport">
+          <button class="customerSupportButton">
+            <img class="customerSupportImage" src="../images/customer_support.png" alt="Logo">
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="menu">
+      <div class="aboutUs">
+        <button class="aboutUsButton">About Us</button>
+      </div>
+      <div class="products">
+        <button class="productsButton">Products</button>
+      </div>
+      <div class="services">
+        <button class="servicesButton">Services</button>
+      </div>
+      <div class="contactUs">
+        <button class="contactUsButton">Contact Us</button>
+      </div>
+    </div>
+
+    <div class="slideshow">
+      <div class="slide" style="display: block;">
+        <img class="slideshowPhoto" src="../images/tools.png" alt="Slide 1">
+      </div>
+      <div class="slide">
+        <img class="slideshowPhoto" src="../images/tools2.png" alt="Slide 2">
+      </div>
+      <div class="slide">
+        <img class="slideshowPhoto" src="../images/tools3.png" alt="Slide 3">
+      </div>
+    
+      <a class="prev">❮</a>
+      <a class="next">❯</a>
+    </div>
+
+    <div class="newProducts">
+    </div>
+
+    <div class="footer">
+      <div class="contact">
+        CONTACT
+      </div>
+
+      <div class="newsLetter">
+        <div class="newsLetterText">Subscribe to our newsletter</div>
+        <input class="newsLetterInput" type="text" placeholder="Enter your email">
+        <button class="newsLetterButton">Subscribe</button>
+      </div>
+
+      <div class="infoCompany">
+        INFOSss
+      </div>
+    </div>
+
+    
+    <script src="../javascript/main.js"></script>
+    
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+
+        showSlide(slideIndex);
+        
+        prev.addEventListener("click", function() {
+          plusSlides(-1);
+        });
+
+        next.addEventListener("click", function() {
+          plusSlides(1);
+        });
+      });
+    </script>
+
+    
+
+  </body>
+</html>

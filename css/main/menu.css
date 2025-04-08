@@ -1,0 +1,40 @@
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px transparent;
+  border-top: solid 2px black;
+  margin: 40px 150px;
+  padding-top: 30px;
+}
+
+.aboutUs{
+  flex:1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.products{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.services{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contactUs{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutUsButton, .contactUsButton, .productsButton, .servicesButton{
+  background-color: transparent;
+  border: none;
+  font-size:24px;
+}

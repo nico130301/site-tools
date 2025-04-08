@@ -1,0 +1,92 @@
+.body{
+  background-color: rgb(222, 221, 221);
+  width :100%;
+  margin-top:20px;
+  margin-left:0;
+  margin-right: 0;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  height:50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  flex : 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search{
+  flex : 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  height: 40px;
+  background-color: white;
+  align-items: center;
+}
+
+.searchText{
+  flex:7;
+  border : none;
+  height: 30px;
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.searchText:focus{
+  outline: none;
+}
+
+.searchButton{
+
+  flex:1;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border : none;
+  cursor: pointer;
+}
+
+.searchImage{
+  width: 20px;
+  height: 20px;
+}
+
+.infoAccount{
+  flex : 1.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.favorites, .cart, .customerSupport{
+  flex : 1;
+  margin:10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.favoritesButton, .cartButton, .customerSupportButton{
+  background-color: transparent;
+  border : none;
+  cursor: pointer;
+}
+
+
+.favoritesImage, .cartImage, .customerSupportImage{
+  width: 30px;
+  height: 30px;
+}
+
