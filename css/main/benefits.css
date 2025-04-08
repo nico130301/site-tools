@@ -1,0 +1,30 @@
+.benefits{
+  background-color: grey;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.benefitItem{
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.benefitText{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family : "Open Sans";
+}
+.benefitImage{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
