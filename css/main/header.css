@@ -7,11 +7,14 @@
 }
 
 .header{
+  position: fixed;
   display: flex;
   flex-direction: row;
   height:50px;
   justify-content: space-between;
   align-items: center;
+  
+
 }
 
 .logo{
