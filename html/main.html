@@ -34,6 +34,7 @@
         <div class="cart">
           <button class="cartButton">
             <img class="favoritesImage" src="../images/cart.png" alt="Logo">
+            <span class="cartCount">0</span>
           </button>
         </div>
         
@@ -78,14 +79,7 @@
     <div class="newProducts">
       <div class="newProductsText">New Products</div>
 
-      <div class="newProductsGrid">
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-        <div class="product"></div>
-      </div>
+      <div class="newProductsGrid"></div>
     </div>
 
     <div class="benefits">
@@ -153,25 +147,8 @@
     </div>
 
     
-    <script src="../javascript/main.js"></script>
+    <script type= "module"src="../javascript/main.js"></script>
     
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const prev = document.querySelector(".prev");
-        const next = document.querySelector(".next");
-
-        showSlide(slideIndex);
-        
-        prev.addEventListener("click", function() {
-          plusSlides(-1);
-        });
-
-        next.addEventListener("click", function() {
-          plusSlides(1);
-        });
-      });
-    </script>
 
     
 
