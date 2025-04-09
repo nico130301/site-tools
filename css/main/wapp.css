@@ -1,0 +1,10 @@
+.wappButton{
+  background-color: transparent;
+  border: none;
+}
+
+.wapp{
+  position:fixed;
+  right:20px;
+  bottom:120px;
+}
