@@ -2,17 +2,19 @@
   height: 750px;
   display: flex;
   flex-direction: column;
-  margin: 20px 200px;
+  margin: 20px 230px;
+  width: 1200px;
 }
 
 .newProductsText{
   flex: 1;
-  font-size: 20px;
+  font-size: 30px;
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-family : "Open Sans";
   margin: 10px 0;
-  padding-top: 10px;
+  text-align: center;
+  padding:10px 20px 0px 20px;
 }
 
 .newProductsGrid{
@@ -30,7 +32,6 @@
 
   border : 1px solid black;
   border-radius: 10px;
-
   display: flex;
   flex-direction: column;
   margin: 20px;

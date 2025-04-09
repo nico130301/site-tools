@@ -1,10 +1,20 @@
 .wappButton{
   background-color: transparent;
   border: none;
+  width: 64px;
+  height: 64px;
+  margin:0;
+  padding: 0;
 }
 
 .wapp{
   position:fixed;
   right:20px;
   bottom:120px;
+}
+
+.wappImage{
+  width: 64px;
+  height: 64px;
+
 }
