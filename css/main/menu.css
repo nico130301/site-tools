@@ -39,7 +39,7 @@
 .aboutUsButton, .contactUsButton, .productsButton, .servicesButton{
   background-color: transparent;
   border: none;
-  font-size:24px;
+  font-size:20px;
   font-weight: bold;
   font-family : "Open Sans";
 }

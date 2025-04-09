@@ -1,5 +1,4 @@
-import {products} from '../data/data-products.js';
-
+import {newproducts} from '../data/data-products.js';
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -38,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // NEW PRODUCTS SETUP
 
 
-  let productsHTML = '';
+  let newproductsHTML = '';
 
-  products.forEach((product) => {
-    productsHTML += `
+  newproducts.forEach((newproduct) => {
+    newproductsHTML += `
       <div class="product">
 
         <div class="productFavoriteContainer">
@@ -50,13 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <div class="productImageContainer">
           <img class="productImage"
-            src="${product.image}">
+            src="${newproduct.image}">
         </div>
 
         
 
         <div class="productName">
-          ${product.name}
+          ${newproduct.name}
         </div>
 
         
@@ -76,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </select>
           </div>
           <div class="addtoCartButtonContainer">
-            <button class="addCartButton" data-product-id="${product.id}">
+            <button class="addCartButton" data-product-id="${newproduct.id}">
               Add to Cart
             </button>
           </div>
@@ -85,9 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
   });
 
-document.querySelector('.newProductsGrid').innerHTML = productsHTML;
+  document.querySelector('.newProductsGrid').innerHTML = newproductsHTML;
 
+    
+})
   
-});
 
 
