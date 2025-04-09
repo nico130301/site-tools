@@ -1,4 +1,4 @@
-import {newproducts} from '../data/data-products.js';
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
