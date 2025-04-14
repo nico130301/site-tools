@@ -3,7 +3,7 @@ import {products} from '../data/data_products.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   let productsHTML = '';
-
+/*
     products.forEach((product) => {
       productsHTML += `
         <div class="product">
@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
     });
     
-  document.querySelector('.productsPageGrid').innerHTML = productsHTML;
+  document.querySelector('.productsPageGrid').innerHTML = productsHTML;*/
 
 })

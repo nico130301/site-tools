@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>ARTOOLS</title>
-    <link rel="stylesheet" href="../css/main/header.css">
+    <link rel="stylesheet" href="../css/main/header.css"> 
     <link rel="stylesheet" href="../css/main/menu.css">
     <link rel="stylesheet" href="../css/main/slideshow.css"> 
     <link rel="stylesheet" href="../css/main/footer.css"> 
@@ -15,63 +15,23 @@
 
   <body class="body">
     
-    <div class="header">
-      <div class="logo">
-          <img class="logoImage" src="../images/logo.png"  alt="Logo" onclick="location.href='main.html'">
-      </div>
-      <div class="search">
-        <input class="searchText" type="text" placeholder="Search...">
-        <button class="searchButton" type="submit">
-          <img class="searchImage" src="../images/search.png" alt="Logo">
-        </button>
-      </div>
-      <div class="infoAccount">
-        <div class="favorites">
-          <button class="favoritesButton">
-            <img class="favoritesImage" src="../images/heart.png" alt="Logo">
-          </button>
-        </div>
-
-        <div class="cart">
-          <button class="cartButton" onclick="location.href='checkout.html'">
-            <img class="favoritesImage" src="../images/cart.png" alt="Logo">
-            <span class="cartQuantity">0</span>
-          </button>
-        </div>
-        
-        <div class="customerSupport">
-          <button class="customerSupportButton">
-            <img class="customerSupportImage" src="../images/customer_support.png" alt="Logo">
-          </button>
-        </div>
-      </div>
-    </div>
     
-    <div class="menu">
-      <div class="aboutUs">
-        <button class="aboutUsButton">About Us</button>
-      </div>
-      <div class="products">
-        <button class="productsButton" onclick="location.href='products.html'">Products</button>
-      </div>
-      <div class="services">
-        <button class="servicesButton">Services</button>
-      </div>
-      <div class="contactUs">
-        <button class="contactUsButton">Contact Us</button>
-      </div>
-    </div>
+    <div class="header"></div>
 
-    <div class="wapp">  
-      <a href="https://wa.me/+40731110771" target="_blank">
-        <button class="wappButton">
-          <img class="wappImage" src="../images/wapp.png" alt="WhatsApp">
-        </button>
-      </a>
-    </div>
+
+    <div class="menu"></div>
 
     CHECKOUT
+
+    <div class="footer"></div> 
+
+    <div class="wapp"></div>
+
     
-    <script type= "module"src="../javascript/checkout.js"></script>
+    <script src="../../javascript/utils/header.js"></script>
+    <script src="../../javascript/utils/menu.js"></script>
+    <script src="../../javascript/utils/footer.js"></script>
+    <script src="../../javascript/utils/wapp.js"></script>
+    <script type= "module"src="../../javascript/checkout.js"></script>
   </body>
   </html>
