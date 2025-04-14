@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlide(slideIndex);
   }
 
+  setInterval(() => {
+    plusSlides(1);
+  }, 3000);
+
 
   // NEW PRODUCTS SETUP
 
