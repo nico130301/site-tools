@@ -1,11 +1,17 @@
 .menu{
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px transparent;
   height : 70px;
-  margin-bottom:0px;
-  
+  left: 0px;
+  right: 0px;
+  margin-bottom:10px;
+  background-color: rgb(222, 221, 221);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  top: 70px;
+  z-index: 100;
 }
 
 .aboutUs{

@@ -1,23 +1,19 @@
 .category {
-  padding-top: 40px;
+  padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 25px;
   padding-right: 25px;
   border : 1px solid  rgb(207, 207, 207);
   border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 20px;
+  border: solid 3px transparent;
   background-color: white;
 }
 
-.cateogryImageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 90px;
-  margin-bottom: 20px;
+.category:hover {
+  border-color:rgb(0,188,255);
 }
 
 .categoriesText{
@@ -27,27 +23,58 @@
   font-weight: bold;
   font-family : "Open Sans";
   margin: 10px 0;
-  text-align: center;
+  text-align: left;
   padding:10px 20px 0px 20px;
 }
 
+.categoryImageContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
 
-.cateogryImage {
+
+.categoryImage {
   max-width: 100%;
   max-height: 100%;
 }
 
+.categoryDescription{
+  flex:2;
+  justify-content: center;
+}
+
 .categoryName {
-  height: 40px;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
+  font-family : "Open Sans";
+}
+
+.categoryIcon{
+  font-size: 12px;
+  color: rgb(0,188,255);
+  font-weight: bold;
+  font-family : "Open Sans";
+}
+
+.categoryCount{
+  font-size: 12px;
+  font-family : "Open Sans";
 }
 
 
 .categoriesGrid{
-
+  
   display:grid;
-  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.productsCategories{
+  padding-top: 15px;
+  height : 600px;
+}
+
 

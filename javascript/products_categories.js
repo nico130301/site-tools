@@ -14,13 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
 
         
+        <div class="categoryDescription">
+          <div class="categoryName">
+            ${category.name}
+            <span class="categoryIcon">></span>
+          </div>
 
-        <div class="categoryName">
-          ${category.name}
+          <div class="categoryCount">
+            ${category.count} products
+          </div>
         </div>
-
-        
-        
       </div>
     `;
   });

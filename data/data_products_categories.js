@@ -1,31 +1,35 @@
 export const products_categories = [
   {
-    id: "cheie_fixa",
+    id: "chei_fixe",
     image: "../images/cheie_fixa.png",
-    name: "Cheie fixa",
+    name: "Chei fixe",
     favorite: false,
+    count: 11,
     keywords: []
   }
   ,
   {
-    id: "cheie_inelara",
+    id: "chei_inelara",
     image: "../images/cheie_inelara.png",
-    name: "Cheie inelara",
+    name: "Chei inelare",
     favorite: false,
+    count: 23,
     keywords: []
   },
   {
-    id: "coasa",
+    id: "coase",
     image: "../images/coasa.png",
-    name: "Coasa",
+    name: "Coase",
     favorite: false,
+    count: 45,
     keywords: []
   },
   {
-    id: "pila",
+    id: "pile",
     image: "../images/pila.png",
-    name: "Pila",
+    name: "Pile",
     favorite: false,
+    count: 3,
     keywords: []
   },
   
@@ -34,13 +38,15 @@ export const products_categories = [
     image: "../images/set_surubelnite.jpg",
     name: "Set surubelnite",
     favorite: false,
+    count: 14,
     keywords: []
   },
   {
-    id: "surubelnita",
+    id: "surubelnite",
     image: "../images/surubelnita.png",
-    name: "Surubelnita",
+    name: "Surubelnite",
     favorite: false,
+    count: 20,
     keywords: []
   }
 ]
