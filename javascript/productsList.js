@@ -56,20 +56,22 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.productsListGrid').innerHTML = productsListHTML;
   
   
-  let categoriesHTML = '';
+  let categoriesListHTML = '';
 
-  products_categories.forEach((category) => {
-    categoriesHTML += `
-      <div class="category" onclick="location.href='../../html/productsList/${category.id}.html'">
+  products_categories.forEach((categoryList) => {
+    categoriesListHTML += `
+      <div class="category" onclick="location.href='../../html/productsList/${categoryList.id}.html'">
         
           <div class="categoryName">
-            ${category.name}
+            ${categoryList.name}
           </div>
       </div>
     `;
   });
   
-  document.querySelector('.productsListCategoriesGrid').innerHTML = categoriesHTML;
+  document.querySelector('.productsListCategoriesGrid').innerHTML = categoriesListHTML;
+
+  document.querySelector('.productsListText').innerHTML = fileName;
     
 })
     
