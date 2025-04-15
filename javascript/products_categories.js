@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   products_categories.forEach((category) => {
     categoriesHTML += `
-      <div class="category">
+      <div class="category" onclick="location.href='../../html/productsList/${category.id}.html'">
 
         <div class="categoryImageContainer">
           <img class="categoryImage"

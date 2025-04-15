@@ -1,25 +1,25 @@
 export const products_categories = [
   {
-    id: "chei_fixe",
+    id: "chisels",
     image: "../images/cheie_fixa.png",
-    name: "Chei fixe",
+    name: "Chisels",
     favorite: false,
     count: 11,
     keywords: []
   }
   ,
   {
-    id: "chei_inelara",
+    id: "cubePoints",
     image: "../images/cheie_inelara.png",
-    name: "Chei inelare",
+    name: "CubePoints",
     favorite: false,
     count: 23,
     keywords: []
   },
   {
-    id: "coase",
+    id: "cubes",
     image: "../images/coasa.png",
-    name: "Coase",
+    name: "Cubes",
     favorite: false,
     count: 45,
     keywords: []
