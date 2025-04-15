@@ -42,9 +42,9 @@ export const products_categories = [
     keywords: []
   },
   {
-    id: "surubelnite",
+    id: "screwdrivers",
     image: "../images/surubelnita.png",
-    name: "Surubelnite",
+    name: "Screwdrivers",
     favorite: false,
     count: 20,
     keywords: []

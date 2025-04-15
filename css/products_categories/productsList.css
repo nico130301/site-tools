@@ -1,10 +1,30 @@
-.productsList{
+.productsListCategories{
+  flex:1;
+}
+
+.productsListContent{
   height: 750px;
   display: flex;
+  flex : 4;
   flex-direction: column;
   margin: 20px 230px;
   width: 1200px;
 }
+
+.productsList{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.productsListCategoriesGrid{
+  display : flex;
+  flex-direction: column;
+}
+
 
 .productsListText{
   flex: 1;
@@ -35,6 +55,7 @@
   flex-direction: column;
   margin: 20px;
   background-color: white;
+  height: 230px;
 }
 
 .productImageContainer {

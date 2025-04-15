@@ -5,6 +5,7 @@ export const productsList = [
     name: "Chei fixe",
     favorite: false,
     count: 11,
+    type: "chisels",
     keywords: []
   }
   ,
@@ -14,6 +15,7 @@ export const productsList = [
     name: "Chei inelare",
     favorite: false,
     count: 23,
+    type: "chisels",
     keywords: []
   },
   {
@@ -39,6 +41,7 @@ export const productsList = [
     name: "Set surubelnite",
     favorite: false,
     count: 14,
+    type: "screwdrivers",
     keywords: []
   },
   {
@@ -47,6 +50,7 @@ export const productsList = [
     name: "Surubelnite",
     favorite: false,
     count: 20,
+    type: "screwdrivers",
     keywords: []
   }
 ]
