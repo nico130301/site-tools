@@ -26,35 +26,24 @@ document.addEventListener('DOMContentLoaded', function() {
             ${productList.name}
           </div>
 
-          
           <div class="addToCartContainer">
-            <div class="quantityContainer">
-              <select>
-                <option selected value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-              </select>
-            </div>
             <div class="addtoCartButtonContainer">
               <button class="addCartButton" data-product-id="${productList.id}">
                 Add to Cart
               </button>
             </div>
           </div>
+          
         </div>
-      `;
+
+        `
+      ;
     }
   });
 
   document.querySelector('.productsListGrid').innerHTML = productsListHTML;
   
+  let d= '';
   
   let categoriesListHTML = '';
 
@@ -63,15 +52,20 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="category" onclick="location.href='../../html/productsList/${categoryList.id}.html'">
         
           <div class="categoryName">
-            ${categoryList.name}
+            > ${categoryList.name} (${categoryList.count})
           </div>
       </div>
     `;
+    if(categoryList.id === fileName) {
+      d = categoryList.name;
+    }
+
   });
   
   document.querySelector('.productsListCategoriesGrid').innerHTML = categoriesListHTML;
 
-  document.querySelector('.productsListText').innerHTML = fileName;
+
+  document.querySelector('.productsListText').innerHTML = d;
     
 })
     
