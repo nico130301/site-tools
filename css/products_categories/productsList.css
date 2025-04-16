@@ -113,6 +113,12 @@
   left:280px;
 }
 
+.productFavoriteIcon{
+  font-size: 30px;
+  cursor: pointer;
+  color :black;
+  
+}
 
 
 .productImage {

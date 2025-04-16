@@ -19,7 +19,7 @@ const observer = new MutationObserver(() => {
       productsListHTML += `
         <div class="product">
           <div class="productFavoriteContainer">
-            <img class="productFavoriteIcon" src="../../images/product_heart.png" alt="favorite">
+            <i class="productFavoriteIcon fa-regular fa-heart"></i>
           </div>
 
           <div class="productImageContainer">
@@ -59,6 +59,20 @@ const observer = new MutationObserver(() => {
 
   categoriesGrid.innerHTML = categoriesListHTML;
   text.innerHTML = d;
+
+  // Favorite Icon
+
+  const favoriteIcons = document.querySelectorAll('.productFavoriteIcon');
+
+  favoriteIcons.forEach(icon => {
+    icon.addEventListener('click', function () {
+      this.classList.toggle('fa-regular');
+      this.classList.toggle('fa-solid');
+
+    this.style.color = this.classList.contains('fa-solid') ? 'red' : 'black';
+    });
+  });
+
 });
 
 observer.observe(document.body, { childList: true, subtree: true });

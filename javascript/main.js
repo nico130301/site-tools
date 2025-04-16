@@ -79,9 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
       this.classList.toggle('fa-solid');
 
     this.style.color = this.classList.contains('fa-solid') ? 'red' : 'black';
+    });
   });
-});
     
+  // ADD TO CART BUTTON
+
+  
 })
   
 

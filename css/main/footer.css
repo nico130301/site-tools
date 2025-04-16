@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(94, 94, 94, 0.275);
   height: 300px;
 
 }
@@ -35,6 +35,7 @@
   height: 40px;
   background-color: white;
   margin-right: 20px;
+  padding-left: 10px;
 } 
 .newsLetterButton{
   flex:0.5;
@@ -74,6 +75,5 @@
   justify-content: center;
   align-items: center;
   color: rgb(0, 0, 0)  ;
-  border: solid 1px black;
 
 }
