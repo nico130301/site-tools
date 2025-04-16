@@ -18,13 +18,14 @@
   align-items: center;
   z-index: 10;
   height: 70px;
-  background-color: rgb(0,188,255);
+  background-color: #245478;
 }
 
 .logo{
   flex : 1;
   display: flex;
   justify-content: center;
+  height: 50px;
 }
 
 .search{
@@ -68,8 +69,8 @@
 }
 
 .searchImage{
-  width: 20px;
-  height: 20px;
+  font-size:20px;
+  color: #245478;
 }
 
 .infoAccount{
@@ -89,7 +90,7 @@
 
 .cartQuantity{
   position: relative;
-  background-color: red;
+  background-color: #f48935;
   color: white;
   border-radius: 50%; 
   font-weight: bold; 
@@ -103,11 +104,14 @@
   background-color: transparent;
   border : none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
-.favoritesImage, .cartImage, .customerSupportImage{
-  width: 30px;
-  height: 30px;
+.icon{
+  font-size: 30px;
+  color: white;
 }
 

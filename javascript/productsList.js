@@ -1,14 +1,21 @@
-import {productsList} from '../../data/data_products_List.js';
-import {products_categories} from '../data/data_products_categories.js';
+import { productsList } from '../../data/data_products_List.js';
+import { products_categories } from '../data/data_products_categories.js';
 
-document.addEventListener('DOMContentLoaded', function() {
+const observer = new MutationObserver(() => {
+  const grid = document.querySelector('.productsListGrid');
+  const categoriesGrid = document.querySelector('.productsListCategoriesGrid');
+  const text = document.querySelector('.productsListText');
+
+  if (!grid || !categoriesGrid || !text) return;
+
+  observer.disconnect();
+
+  const path = window.location.pathname;
+  const fileName = path.substring(path.lastIndexOf('/') + 1).split('.')[0];
 
   let productsListHTML = '';
-  const path = window.location.pathname;
-  const fileName = path.substring(path.lastIndexOf('/') + 1).split('.')[0]; 
-
   productsList.forEach((productList) => {
-    if(productList.type === fileName) {
+    if (productList.type === fileName) {
       productsListHTML += `
         <div class="product">
           <div class="productFavoriteContainer">
@@ -16,15 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
 
           <div class="productImageContainer">
-            <img class="productImage"
-              src="${productList.image}">
+            <img class="productImage" src="${productList.image}">
           </div>
 
-          
-
-          <div class="productName">
-            ${productList.name}
-          </div>
+          <div class="productName">${productList.name}</div>
 
           <div class="addToCartContainer">
             <div class="addtoCartButtonContainer">
@@ -33,39 +35,30 @@ document.addEventListener('DOMContentLoaded', function() {
               </button>
             </div>
           </div>
-          
         </div>
-
-        `
-      ;
+      `;
     }
   });
 
-  document.querySelector('.productsListGrid').innerHTML = productsListHTML;
-  
-  let d= '';
-  
-  let categoriesListHTML = '';
+  grid.innerHTML = productsListHTML;
 
+  let d = '';
+  let categoriesListHTML = '';
   products_categories.forEach((categoryList) => {
     categoriesListHTML += `
       <div class="category" onclick="location.href='../../html/productsList/${categoryList.id}.html'">
-        
-          <div class="categoryName">
-            > ${categoryList.name} (${categoryList.count})
-          </div>
+        <div class="categoryName">
+          > ${categoryList.name} (${categoryList.count})
+        </div>
       </div>
     `;
-    if(categoryList.id === fileName) {
+    if (categoryList.id === fileName) {
       d = categoryList.name;
     }
-
   });
-  
-  document.querySelector('.productsListCategoriesGrid').innerHTML = categoriesListHTML;
 
+  categoriesGrid.innerHTML = categoriesListHTML;
+  text.innerHTML = d;
+});
 
-  document.querySelector('.productsListText').innerHTML = d;
-    
-})
-    
+observer.observe(document.body, { childList: true, subtree: true });
