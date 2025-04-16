@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           <div class="addToCartContainer">
             <div class="addtoCartButtonContainer">
-              <button class="addCartButton" data-product-id="${newproduct.id}">
+              <button class="addCartButton" data-name="${newproduct.name}" data-image="${newproduct.image}">
                 Add to Cart
               </button>
             </div>
@@ -84,7 +84,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
   // ADD TO CART BUTTON
 
-  
+  const buttons = document.querySelectorAll('.addCartButton');
+  buttons.forEach(button => {
+    button.addEventListener('click', function () {
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const name = button.dataset.name;
+      const image = button.dataset.image;
+      
+      const existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ name, image, quantity: 1 });
+      }
+      
+      localStorage.setItem('cart', JSON.stringify(cart));
+      console.log(cart);
+    });
+  });
 })
   
 
