@@ -84,14 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
   // ADD TO CART BUTTON
 
-  function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
-    document.querySelector('.cartQuantity').textContent = totalQuantity;
-  }
-
-  // Initialize cart count on page load
-  updateCartCount();
 
   const buttons = document.querySelectorAll('.addCartButton');
   buttons.forEach(button => {
