@@ -6,16 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = '';
 
     if (cart.length === 0) {
-      container.innerHTML = "<p>Your cart is empty.</p>";
+      container.innerHTML = '<div class="emptyCart">Your cart is empty.</div>';
     } else {
       cart.forEach(item => {
         let itemDiv = ``;
         itemDiv= `
           <div class="cartItem">
-            <img src="${item.image}" width="100"/>
-            <p><strong>${item.name}</strong></p>
-            <p>Quantity: ${item.quantity}</p>
-            <button class="deleteItem">Delete Item</button>
+            <img class"itemImage src="${item.image}" />
+            <div class="itemDetails">
+              <div class="itemName"> ${item.name}</div>
+              <div class="itemQuantity"> Quantity: ${item.quantity}</div>
+              <button class="deleteItem">Delete Item</button>
+            </div>
           </div>
         `;
         container.innerHTML += itemDiv;
