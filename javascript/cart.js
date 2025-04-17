@@ -32,6 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    function collectCartInfoForForm() {
+
+      let cartData = "";
+
+      cart.forEach(item => {
+        cartData += `${item.name} - Quantity: ${item.quantity}\n`;
+      });
+      document.querySelector(".cartDetails").value = cartData;
+    }
+
+    form.addEventListener("submit", function (e) {
+      collectCartInfoForForm();
+    });
+
 
     document.querySelectorAll('.deleteItem').forEach(button => {
       button.addEventListener('click', () => {
