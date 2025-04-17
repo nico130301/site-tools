@@ -111,6 +111,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
       updateCartCount();
 
+      button.textContent = 'Added to Cart!';
+      button.disabled = true;
+      button.classList.add('addedCartButton');
+
+      setTimeout(() => {
+        button.disabled = false;
+        button.classList.remove('addedCartButton');
+        button.textContent = 'Add to Cart';
+      }, 1000);
+
     });
   });
 })

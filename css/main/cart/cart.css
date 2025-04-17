@@ -35,6 +35,9 @@
   height: 550px;
 }
 
+
+/*///////// CART ITEMS/////////////*/
+
 .cartItem{
   display: flex;
   flex: 1;
@@ -63,39 +66,75 @@
   color: #333333;
   flex: 1;
 }
-.itemQuantity{
-  font-size: 16px;
-  font-weight: 400;
-  color: #333333;
+.quantityContainer{
+  display: flex;
+  flex: 0.5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding : 10px;
+  border: 2px solid #afb5bf;
+  height: 30px;
+}
+
+.removeQuantity, .addQuantity{
   flex: 1;
+  color: #afb5bf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 35px;
+  font-weight: bold;
+  font-family : "Open Sans";
+}
+
+.removeQuantity{
+  padding-bottom:8px;
+}
+
+.removeQuantity:hover, .addQuantity:hover{
+  color: black;
+}
+.itemQuantity{
+  font-size: 15px;
+  color: black;
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family : "Open Sans";
+  font-weight: bold;
 }
 .deleteItem{
   display: flex;
   flex: 0.5;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
-  height: 10px;
-  width: 10px;
 }
 
 .deleteButton{
   background-color: white;
-  border: 2px solid #d2d8e1;
+  /*border: 2px solid #d2d8e1;*/
+  border: none;
   color: #d2d8e1;
-  padding: 5px 8px;
-  font-size: 12px;
+  font-size: 24px;
   font-weight: bold;
   margin: 2px;
   cursor: pointer;
-  border-radius: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family : "Open Sans";
 }
 
 .deleteButton:hover{
   color: rgb(255, 0, 0);
-  border: 2px solid #ff0000;
+  /*border: 2px solid #ff0000;*/
 }
 
+/*///////// FORM/////////////*/
 
 .formTitle{
   font-size: 34px;

@@ -97,12 +97,24 @@
 }
 
 .addCartButton:hover {
-  background-color:#f48935;
+  
+  background-color: #F48935;
   color: white;
-  border: #f48935 solid 1px;
   cursor: pointer;
+  border: 1px solid #F48935;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
-
 }
 
+.addedCartButton {
+  background-color:green;
+  color: white;
+  border: none;
+}
+
+.addedCartButton:hover {
+  
+  background-color:green;
+  color: white;
+  border: none;
+}
