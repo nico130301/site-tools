@@ -32,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCart();
       });
     });
+
+    if (window.updateCartCount) {
+      window.updateCartCount();
+    }
   }
     renderCart();
   
