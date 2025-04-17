@@ -12,12 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let itemDiv = ``;
         itemDiv= `
           <div class="cartItem">
-            <img class"itemImage src="${item.image}" />
-            <div class="itemDetails">
-              <div class="itemName"> ${item.name}</div>
-              <div class="itemQuantity"> Quantity: ${item.quantity}</div>
-              <button class="deleteItem">Delete Item</button>
+            <div class="itemImageContainer">
+              <img class="itemImage" src="${item.image}" />
             </div>
+
+            <div class="itemName"> ${item.name}</div>
+            <div class="itemQuantity"> Quantity: ${item.quantity}</div>
+            <div class="deleteItem">
+              <button class="deleteButton">x</button>
+            </div>
+
           </div>
         `;
         container.innerHTML += itemDiv;

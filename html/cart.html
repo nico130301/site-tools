@@ -24,11 +24,28 @@
       Cart
     </div>
 
-    <div class="cart">
+    <div class="cartBody">
       <div class="cartContainer">
       </div>
       <div class="offer">
-        Call
+        <div class="formTitle">Request an order</div>
+        <form class="form" action="https://formsubmit.co/nicroraza@gmail.com" method="POST">
+          <label for="name" class="formLabel">Full Name *</label>
+          <input type="text" class="formInput" name="name" required />
+    
+          <label for="email" class="formLabel">Email Address *</label>
+          <input type="email" class="formInput" name="email" required />
+    
+          <label for="phone" class="formLabel">Phone Number *</label>
+          <input type="tel" class="formInput" name="phone" required />
+    
+          <label for="message" class="formLabel">Message / Request</label>
+          <textarea class="formMessage" name="message" rows="4"></textarea>
+    
+          <button class="formButton" type="submit">Send Request</button>
+
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/html/cart.html">
+        </form>
       </div>
     </div>
     

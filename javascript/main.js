@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       updateCartCount();
 
-      alert(`${name} has been added to your cart.`);
     });
   });
 })
