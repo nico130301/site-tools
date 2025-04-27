@@ -6,7 +6,8 @@ export const productsList = [
     favorite: false,
     count: 11,
     type: "chisels",
-    keywords: []
+    keywords: [],
+    link: "product1"
   }
   ,
   {
