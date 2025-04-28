@@ -1,20 +1,15 @@
-import { productsList } from '../../data/data_products_List.js';
+import { productsList } from '../data/data_products_List.js';
 import { products_categories } from '../data/data_products_categories.js';
 
 const observer = new MutationObserver(() => {
   const categoriesGrid = document.querySelector('.productsListCategoriesGrid');
-  const text = document.querySelector('.productsListText');
+  const text = document.querySelector('.productPageText');
 
   if (!categoriesGrid || !text) return;
 
   observer.disconnect();
-
-  const path = window.location.pathname;
-  
-
   // Categories List
-  
-  let d = '';
+
   let categoriesListHTML = '';
   products_categories.forEach((categoryList) => {
     categoriesListHTML += `
@@ -24,26 +19,9 @@ const observer = new MutationObserver(() => {
         </div>
       </div>
     `;
-    if (categoryList.id === fileName) {
-      d = categoryList.name;
-    }
   });
 
   categoriesGrid.innerHTML = categoriesListHTML;
-  text.innerHTML = d;
-
-  // Favorite Icon
-
-  const favoriteIcons = document.querySelectorAll('.productFavoriteIcon');
-
-  favoriteIcons.forEach(icon => {
-    icon.addEventListener('click', function () {
-      this.classList.toggle('fa-regular');
-      this.classList.toggle('fa-solid');
-
-    this.style.color = this.classList.contains('fa-solid') ? 'red' : 'black';
-    });
-  });
 
 });
 

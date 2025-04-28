@@ -44,7 +44,6 @@ const observer = new MutationObserver(() => {
 
 
   // Categories List
-  
   let d = '';
   let categoriesListHTML = '';
   products_categories.forEach((categoryList) => {
