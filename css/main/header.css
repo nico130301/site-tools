@@ -1,10 +1,7 @@
 .body{
   background-color: #ffffff;
   width :100%;
-  margin-top: 140px;
-  margin-left:0;
-  margin-right: 0;
-
+  margin: 140px 0 0 0;
 }
 
 .header{

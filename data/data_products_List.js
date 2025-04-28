@@ -7,7 +7,18 @@ export const productsList = [
     count: 11,
     type: "chisels",
     keywords: [],
-    link: "product1"
+    description: "Chei fixe de diverse dimensiuni, ideale pentru strangerea si desfacerea suruburilor. Constructie din otel de inalta calitate pentru durabilitate si rezistenta la uzura. Adecvate pentru utilizarea in ateliere, service-uri auto sau acasa. Disponibile in seturi sau individuale. Recomandate pentru utilizarea cu suruburi hexagonale sau cu cap hexagonal.",
+    spec1Title: "Dimensiune",
+    spec1: "8mm",
+    spec2Title: "Material",
+    spec2: "Otel",
+    spec3Title: "Tip",
+    spec3: "Fixe",
+    spec4Title: "Utilizare",
+    spec4: "Atelier, service auto, acasa",
+    spec5Title: "Greutate",
+    spec5: "0.5kg",
+    related: ["chei_inelara", "coase", "pile", "set_surubelnite"]
   }
   ,
   {

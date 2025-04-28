@@ -1,8 +1,14 @@
+.productsList{
+  display: flex;
+  flex-direction: row;
+  margin: 150px 20px 20px 20px;
+}
 .productsListCategories{
   flex:1;
   display: flex;
   flex-direction: column;
   border: 1px solid rgb(207, 207, 207);
+  height: 700px;
 }
 
 .productsListCategoriesText{
@@ -47,18 +53,6 @@
   flex-direction: column;
   margin: 20px;
 }
-
-.productsList{
-  display: flex;
-  flex-direction: row;
-  margin: 150px 20px 20px 20px;
-}
-
-.productsListCategoriesGrid{
-  display : flex;
-  flex-direction: column;
-}
-
 
 .productsListText{
   flex: 1;

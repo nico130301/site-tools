@@ -1,5 +1,15 @@
 import { productsList } from '../../data/data_products_List.js';
 import { products_categories } from '../data/data_products_categories.js';
+export let productClicked = {
+  id: "",
+  image: "",
+  name: "",
+  favorite: false,
+  count: 0,
+  keywords: []
+};
+
+window.productClicked = productClicked;
 
 const observer = new MutationObserver(() => {
   const grid = document.querySelector('.productsListGrid');
@@ -13,11 +23,13 @@ const observer = new MutationObserver(() => {
   const path = window.location.pathname;
   const fileName = path.substring(path.lastIndexOf('/') + 1).split('.')[0];
 
+ 
+
   let productsListHTML = '';
   productsList.forEach((productList) => {
     if (productList.type === fileName) {
       productsListHTML += `
-        <div class="product" onclick="location.href='../../html/productPage/${productList.link}.html'">
+        <div class="product" id="${productList.id}" onclick="location.href='../../html/productPage/product1.html'">
           <div class="productFavoriteContainer">
             <i class="productFavoriteIcon fa-regular fa-heart"></i>
           </div>
@@ -39,8 +51,20 @@ const observer = new MutationObserver(() => {
       `;
     }
   });
-
   grid.innerHTML = productsListHTML;
+
+  grid.addEventListener('click', (event) => {
+    const productElement = event.target.closest('.product');
+    if (productElement) {
+        const productId = productElement.getAttribute('id');
+        console.log('Product clicked:', productId);
+        productClicked.id = productId;
+        localStorage.setItem('productClicked', JSON.stringify(productClicked));
+    }
+});
+  
+
+
 
 
   // Categories List
