@@ -1,0 +1,56 @@
+.productsListCategories{
+  flex:0.7;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(207, 207, 207);
+  height: 700px;
+}
+
+.productsListCategoriesText{
+  background-color: #245478;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 30px;
+  font-family : "Open Sans";
+}
+
+.productsListCategoriesGrid{
+  flex : 13;
+  display: flex;
+  flex-direction: column;
+}
+
+.category{
+  flex:1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.category:hover{
+  background-color: #f3f3f3;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;  
+}
+
+.categoryName{
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family : "Open Sans";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

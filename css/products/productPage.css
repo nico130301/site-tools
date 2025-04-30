@@ -10,58 +10,48 @@
   margin-bottom: 20px;;
 }
 
-.productsListCategories{
-  flex:1;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid rgb(207, 207, 207);
-  height: 700px;
-}
-
-.productsListCategoriesText{
-  background-color: rgb(0, 0, 0);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-top: 30px;
-  font-family : "Open Sans";
-}
-
-.productsListCategoriesGrid{
-  flex : 13;
-  display: flex;
-  flex-direction: column;
-}
-
-.category{
-  flex:1;
-  text-align: center;
-  justify-content: space-between;
-  padding-top: 30px;
-}
-
-.categoryName{
-  font-size: 15px;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-family : "Open Sans";
-  margin: 10px 0;
-  text-align: center;
-  padding:10px 20px 0px 20px;
-}
 
 /*///////////////////////////*/
 
+
+
 .productPageDetails{
-  height: 500px;
   display: flex;
   flex : 4;
-  flex-direction: row;
+  flex-direction: column;
   margin: 20px;
+}
+
+.history{
+  display : flex;
+  flex : 0.1;
+  color:rgb(193, 193, 193);
+  margin : 0 20px;
+  font-size: 20px;
+  font-family : "Open Sans";
+}
+
+.historyStep, .historyProduct{
+  font-size: 20px;
+  color: #245478;
+  font-family : "Open Sans";
+  margin: 0 10px; 
+}
+
+.historyStep{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.historyStep:hover{
+  text-decoration : underline
+}
+
+
+.productPageMainDetails{
+  display: flex;
+  flex: 2;
+  flex-direction: row;;
 }
 
 .productImageContainer{
@@ -75,6 +65,7 @@
   width: 80%;
   height: 80%;
   object-fit: cover;
+ 
 }
 
 .productInfoContainer{
@@ -82,12 +73,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding-left: 30px;
+  height: 80%;
 }
 
 .productId{
-  flex:0.5;
+  flex:0.3;
+  display: flex;
+  align-items: end;
   width: 100%;
   font-size: 20px;
   color: rgb(0, 0, 0);
@@ -114,23 +107,19 @@
   font-family : "Open Sans";
 }
 
-.productAddToCartContainer{
-  flex:1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
 
 .addToCartContainer {
   display: flex;
+  flex: 0.3;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  width: 70%;
+  font-family : "Open Sans";
 }
 
 .addtoCartButtonContainer{
+  display: flex;
+  justify-content: left;
+  align-items: left;
   flex:4;
 
 }
@@ -156,6 +145,7 @@
 .addedCartButton {
   background-color:green;
   color: white;
+  font-family : "Open Sans";
   border: none;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -178,14 +168,13 @@
 
 .specsTitle{
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color:  #245478;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-family : "Open Sans";
-  width: 30%;
-  margin-bottom: 20px;
+  width: 25%;
+  margin: 40px 0;
+  padding: 10px 0px 10px 55px;
 }
 .specContainer{
   display: flex;
@@ -224,19 +213,19 @@
 .relatedProductsContainer{
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
 }
 
 .relatedProductsTitle{
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color:  #245478;
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-family : "Open Sans";
-  width: 30%;
-  margin-bottom: 20px;
+  width: 25%;
+  margin: 40px 0;
+  padding-left: 55px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
@@ -298,4 +287,5 @@
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: bold;
+  font-family : "Open Sans";
 }

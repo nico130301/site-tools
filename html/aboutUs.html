@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARTOOLS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main/header.css">
+    <link rel="stylesheet" href="../css/main/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/aboutUs/aboutUs.css"> 
+    <link rel="stylesheet" href="../css/main/footer.css"> 
+    <link rel="stylesheet" href="../css/main/wapp.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+  </head>
+
+  <body class="body">
+
+    <div class="header"></div>
+
+    <div class="menu"></div>
+
+    <div class="aboutUsContainer">
+      <image class="aboutUsImage" src="/images/aboutUs.webp" ></image>
+      <div class="aboutUsOverlay">
+        <div class="aboutUsTitle">Sobre nosotros</div>
+        
+        <div class="aboutUsText">&nbsp;&nbsp;&nbsp;&nbsp;La expericiencia internacional, de más de 25 años, del Dr. Arturo Rodríguez Ramírez, en el campo de las herramientas  manuales, electricas y pneumaticas, ha sido garantía para el lansamiento en America Latina de ARTools: programa profesional de herramientas de uso industrial, que cumplen – con creces – con los mas altos estandardes de calidad europeos y globales, a traves de la Cia. NIRUT SA, con sede en Costa Rica. <br>&nbsp;&nbsp;&nbsp;&nbsp; Esto nos permite ofrecerle al usuario una gama muy variada de artículos, necesarios para los campos de: Automoción (talleres automotrices), Construcción, Industria, Metal-Mecanica, etc. con diferentes origines: India, China, Taiwan, SurKorea, Italia, Alemania.</div>
+        
+        <div class="aboutUsValues">
+          <div class="aboutUsValue" onclick="scrollToElement('.value1')">NUESTROS <br> VALORES </div> 
+          <div class="aboutUsValue" onclick="scrollToElement('.value2')">NUESTRA <br> CALIDAD </div>
+          <div class="aboutUsValue" onclick="scrollToElement('.value3')">GESTION <br>MEDIOAMBIENTAL </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="aboutUsInfoContainer ">
+      <div class = "aboutUsInfo">
+        <div class = "aboutUsInfoNumber">235</div>
+        <div class = "aboutUsInfoText">Productos</div>
+      </div>
+      <div class = "aboutUsInfo">
+        <div class = "aboutUsInfoNumber">25</div>
+        <div class = "aboutUsInfoText">Años de experiencia</div>
+      </div>
+      <div class = "aboutUsInfo">
+        <div class = "aboutUsInfoNumber">100</div>
+        <div class = "aboutUsInfoText">Clientes satisfechos</div>
+      </div>
+      <div class = "aboutUsInfo">
+        <div class = "aboutUsInfoNumber">50</div>
+        <div class = "aboutUsInfoText">Proveedores</div>
+      </div>
+    </div>
+
+    <div class="value1">
+      <div class="valueTitle">NUESTROS VALORES</div>
+      <div class="valueText">&nbsp;&nbsp;&nbsp;&nbsp;MISION: Promover y proveer a nuestros usuarios con productos de la mas alta calidad.
+        INNOVACION: Estar a la vanguardia con productos de la mas avanzada tecnología a nivel mundial.
+        RESPONSABILIDAD: Asumir la responsabilidad desde el punto de vista ético y legal de los productos que vendemos.</div>
+    </div>
+
+    <div class="value2">
+      <div class="valueTitle">NUESTRA CALIDAD</div>
+      <div class="valueText">&nbsp;&nbsp;&nbsp;&nbsp;Nuestros productos garantizan las verdaderas necesidades de nuestros usuarios y por lo tanto se los ofrecemos de la más alta calidad, en cumplimiento de la norma europea DIN, productos con una excelente funcionalidad, con una ergonomía que proporciona mas comodidad en el trabajo y con elementos del más alto grado de seguridad, para evitar lesiones o accidentes.</div>
+    </div>
+
+    <div class="value3">
+      <div class="valueTitle">GESTION MEDIOAMBIENTAL</div>
+      <div class="valueText">&nbsp;&nbsp;&nbsp;&nbsp;La protección del Medio Ambiente es un tema muy importante para nosotros, es por ello que nos hemos dado a la tarea
+        de establecer alianzas con fabricantes que respetan esta condición y cumplen con la norma internacional ISO 14001.</div>
+    </div>
+
+    <div class="wapp"></div>
+
+    <div class="footer"></div> 
+
+
+
+    <script src="../../javascript/utils/header.js"></script>
+    <script src="../../javascript/utils/menu.js"></script>
+    <script src="../../javascript/utils/footer.js"></script>
+    <script src="../../javascript/utils/wapp.js"></script>
+    <script type= "module"src="../javascript/contact.js"></script>    
+    <script>
+      function scrollToElement(selector) {
+        const element = document.querySelector(selector);
+        const offset = 200;
+        const top = element.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    </script>
+
+    </body>
+</html>

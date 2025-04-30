@@ -1,6 +1,7 @@
 export const productsList = [
   {
     id: "chei_fixe",
+    idNumber : 94329063,
     image: "../../images/cheie_fixa.png",
     name: "Chei fixe",
     favorite: false,

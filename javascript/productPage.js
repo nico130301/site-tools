@@ -35,21 +35,28 @@ const observer = new MutationObserver(() => {
   productsList.forEach((product) => {
     if (product.id === productClicked.id){
       pageContent.innerHTML = `
-        <div class="productImageContainer">
-          <img class="productImage" src="${product.image}">
+        <div class="history">
+            <a class = "historyStep"  onclick="location.href='/html/products_categories.html'">Categories</a>/
+            <a class = "historyStep"  onclick="location.href='/html/productsList/${product.type}.html'">${product.type}</a>/
+            <a class = "historyProduct">${product.name}</a>
         </div>
-        <div class="productInfoContainer">
-          <div class="productId">Cod produs:${product.id}</div>
-          <div class="productName">${product.name}</div>
-          <div class="productDescription">${product.description}</div>
-          <div class="addToCartContainer">
-            <div class="addtoCartButtonContainer">
-              <button class="addCartButton" data-name="${product.name}" data-image="${product.image}">
-                Add to Cart
-              </button>
-            </div>
+        <div class="productPageMainDetails">
+          <div class="productImageContainer">
+            <img class="productImage" src="${product.image}">
           </div>
-        </div>  
+          <div class="productInfoContainer">
+            <div class="productId">${product.idNumber}</div>
+            <div class="productName">${product.name}</div>
+            <div class="productDescription">${product.description}</div>
+            <div class="addToCartContainer">
+              <div class="addtoCartButtonContainer">
+                <button class="addCartButton" data-name="${product.name}" data-image="${product.image}">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>  
+        </div>
       `;
 
       pageSpecs.innerHTML = `

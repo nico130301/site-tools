@@ -49,3 +49,12 @@
   font-weight: bold;
   font-family : "Open Sans";
 }
+
+.aboutUsButton:hover, .contactUsButton:hover, .productsButton:hover, .servicesButton:hover{
+  color: #f48935;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #f48935;
+  text-decoration-thickness: 4px;
+
+}

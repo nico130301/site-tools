@@ -1,0 +1,33 @@
+.contactContainer{
+  background-color: rgb(235, 235, 235);
+  border-radius: 10px;
+  margin : 10% 10% 5% 10%;
+  padding: 2% 5%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.contactTitle{
+  font-size: 250%;
+  font-weight: bold;
+  margin : 2% 0;
+}
+
+.companyName{
+  font-size: 200%;
+  margin : 1%;
+}
+
+.cedJur, .address, .phone, .email{
+  display: flex;
+  margin : 2% 0;
+  font-size : 150%; 
+  align-items: center;
+}
+
+.fa-building-columns, .fa-location-dot, .fa-phone-volume, .fa-envelope{
+  font-size: 150%;
+  margin-right: 2%;
+}
