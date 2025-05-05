@@ -17,4 +17,10 @@ fetch('../../html/utils/header.html')
 
     // Ensure it also updates when DOMContentLoaded fires
     document.addEventListener('DOMContentLoaded', updateCartCount);
+
+    window.handleSearch = function handleSearch() {
+      const search = document.querySelector('.searchText').value;
+      window.location.href = `/html/searchPage.html?search=${encodeURIComponent(search)}`;
+    };
+
   });

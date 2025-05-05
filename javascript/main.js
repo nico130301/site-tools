@@ -1,4 +1,5 @@
 import {newproducts} from '../data/data_newProducts.js';
+import { productClicked} from './productsList.js';
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   newproducts.forEach((newproduct) => {
     newproductsHTML += `
-      <div class="product">
+      <div class="product" id= "${newproduct.id}" onclick="location.href='../../html/productPage/product1.html'">
           <div class="productFavoriteContainer">
             <i class="productFavoriteIcon fa-regular fa-heart"></i>
           </div>
@@ -69,19 +70,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.querySelector('.newProductsGrid').innerHTML = newproductsHTML;
 
+  document.querySelector('.newProductsGrid').addEventListener('click', (event) => {
+        const productElement = event.target.closest('.product');
+        if (productElement) {
+            const productId = productElement.getAttribute('id');
+            console.log('Product clicked:', productId);
+            productClicked.id = productId;
+            localStorage.setItem('productClicked', JSON.stringify(productClicked));
+        }
+    });
+
+
+
   // FAVORITE BUTTON
 
   const favoriteIcons = document.querySelectorAll('.productFavoriteIcon');
-
+  
   favoriteIcons.forEach(icon => {
-    icon.addEventListener('click', function () {
+    icon.addEventListener('click', function (event) {
+      event.stopPropagation();
       this.classList.toggle('fa-regular');
       this.classList.toggle('fa-solid');
 
     this.style.color = this.classList.contains('fa-solid') ? 'red' : 'black';
     });
   });
-    
+
   // ADD TO CART BUTTON
 
   function updateCartCount() {
@@ -92,8 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const buttons = document.querySelectorAll('.addCartButton');
   buttons.forEach(button => {
-    button.addEventListener('click', function () {
-
+    button.addEventListener('click', function (event) {
+      event.stopPropagation();
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
       const name = button.dataset.name;

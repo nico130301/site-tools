@@ -1,0 +1,109 @@
+.hidden {
+  display: none;
+}
+
+.distributorsTitle{
+  display: flex;
+  margin : 10% 0% 0% 2%;
+  background-color: #f48935;
+  color: white;
+  font-size: 300%;
+  font-weight: bold;
+  justify-content: right;
+  width: 40%;
+  padding-right: 2%;
+}
+
+/*///////////////////*/
+
+.distributorsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin : 5% 0% 10% 0;
+  width : 100%;
+  
+}
+
+.country{
+  width : 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15%;
+  flex-direction: column;
+
+  
+}
+.countryButton {
+  display: block;
+  margin: 5px 0;
+  background-color: #245478;
+  color: white;
+  border: none;
+  text-align: left;
+  width : 100%;
+  font-size: 200%;
+  font-weight: bold;
+  padding : 0;
+  
+}
+
+.countryButton:hover {
+  background-color: #184264;
+}
+
+.countryButtonContent{
+  display: flex;
+  align-items: center;
+}
+
+.countryImage{
+  flex:1;
+  width: 15%;
+}
+
+.countryTitle{
+  flex: 6;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 10%;
+  font-size: 150%;
+}
+
+
+/*///////////////////*/
+
+.cities{
+  margin-left:40%;
+  width: 100%;
+  justify-content: right;
+  align-items: right;
+}
+
+.cityButton {
+  display: block;
+  margin: 5px 0;
+  padding: 8px;
+  background-color: white;
+  color: #245478;
+  border: 1% solid #245478;
+  text-align: left;
+  width : 80%;
+  font-size: 200%;
+}
+
+.cityButton:hover {
+  background-color: #ebebeb;
+}
+
+.distributors {
+  border-collapse: collapse;
+  border: 1px solid #184264;
+  margin:0 20% 0 10%;
+}
+
+.distributors:hover {
+}

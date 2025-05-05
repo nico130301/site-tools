@@ -1,33 +1,39 @@
 import { productsList } from '../../data/data_products_List.js';
 import { products_categories } from '../data/data_products_categories.js';
-export let productClicked = {
-  id: "",
-  image: "",
-  name: "",
-  favorite: false,
-  count: 0,
-  keywords: []
-};
-
-window.productClicked = productClicked;
+import { productClicked} from './productsList.js';
 
 const observer = new MutationObserver(() => {
-  const grid = document.querySelector('.productsListGrid');
+
   const categoriesGrid = document.querySelector('.productsListCategoriesGrid');
-  const text = document.querySelector('.productsListText');
 
-  if (!grid || !categoriesGrid || !text) return;
-
+  if (!categoriesGrid) return;
   observer.disconnect();
 
-  const path = window.location.pathname;
-  const fileName = path.substring(path.lastIndexOf('/') + 1).split('.')[0];
+  // Categories List
 
- 
+  let categoriesListHTML = '';
+  products_categories.forEach((categoryList) => {
+    categoriesListHTML += `
+      <div class="category" onclick="location.href='../../html/productsList/${categoryList.id}.html'">
+        <div class="categoryName">
+          > ${categoryList.name} (${categoryList.count})
+        </div>
+      </div>
+    `;
+  });
 
+  categoriesGrid.innerHTML = categoriesListHTML;
+  //searched items
+
+  const grid = document.querySelector('.searchedProductsContent');
+  const searchedNumber = document.querySelector('.searchedProductsNumber');
+  const params = new URLSearchParams(window.location.search);
+  const search = params.get('search').toLowerCase();
+  let numberOfProudcts = 0;
   let productsListHTML = '';
   productsList.forEach((productList) => {
-    if (productList.type === fileName) {
+    if (productList.name.toLowerCase().includes(search)) {
+      numberOfProudcts++;
       productsListHTML += `
         <div class="product" id="${productList.id}" onclick="location.href='../../html/productPage/product1.html'">
           <div class="productFavoriteContainer">
@@ -54,6 +60,26 @@ const observer = new MutationObserver(() => {
   grid.innerHTML = productsListHTML;
 
   grid.addEventListener('click', (event) => {
+      const productElement = event.target.closest('.product');
+      if (productElement) {
+          const productId = productElement.getAttribute('id');
+          console.log('Product clicked:', productId);
+          productClicked.id = productId;
+          localStorage.setItem('productClicked', JSON.stringify(productClicked));
+      }
+  });
+
+
+  // NUMBER OF SEARCHED BUTTONS
+
+  if (numberOfProudcts === 0 )
+    searchedNumber.innerHTML = `nu au fost gasite rezultate pentru : `;
+  if (numberOfProudcts === 1 )
+    searchedNumber.innerHTML = `${numberOfProudcts} rezultat gasit pentru : `;
+  if (numberOfProudcts > 1 )
+    searchedNumber.innerHTML = `${numberOfProudcts} rezultate gasite pentru : `;
+
+  grid.addEventListener('click', (event) => {
     const productElement = event.target.closest('.product');
     if (productElement) {
         const productId = productElement.getAttribute('id');
@@ -63,39 +89,18 @@ const observer = new MutationObserver(() => {
     }
   });
 
+    // FAVORITE BUTTON
 
-  // Categories List
-  let d = '';
-  let categoriesListHTML = '';
-  products_categories.forEach((categoryList) => {
-    categoriesListHTML += `
-      <div class="category" onclick="location.href='../../html/productsList/${categoryList.id}.html'">
-        <div class="categoryName">
-          > ${categoryList.name} (${categoryList.count})
-        </div>
-      </div>
-    `;
-    if (categoryList.id === fileName) {
-      d = categoryList.name;
-    }
-  });
+    const favoriteIcons = document.querySelectorAll('.relatedProductFavoriteIcon');
 
-  categoriesGrid.innerHTML = categoriesListHTML;
-  text.innerHTML = d;
-
-  // FAVORITE BUTTON
-
-  const favoriteIcons = document.querySelectorAll('.productFavoriteIcon');
+    favoriteIcons.forEach(icon => {
+      icon.addEventListener('click', function () {
+        this.classList.toggle('fa-regular');
+        this.classList.toggle('fa-solid');
   
-  favoriteIcons.forEach(icon => {
-    icon.addEventListener('click', function (event) {
-      event.stopPropagation();
-      this.classList.toggle('fa-regular');
-      this.classList.toggle('fa-solid');
-
-    this.style.color = this.classList.contains('fa-solid') ? 'red' : 'black';
+      this.style.color = this.classList.contains('fa-solid') ? 'red' : 'black';
+      });
     });
-  });
 
   // ADD TO CART BUTTON
 
@@ -107,8 +112,8 @@ const observer = new MutationObserver(() => {
 
   const buttons = document.querySelectorAll('.addCartButton');
   buttons.forEach(button => {
-    button.addEventListener('click', function (event) {
-      event.stopPropagation();
+    button.addEventListener('click', function () {
+
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
       const name = button.dataset.name;
@@ -138,7 +143,6 @@ const observer = new MutationObserver(() => {
 
     });
   });
-
 });
 
 observer.observe(document.body, { childList: true, subtree: true });

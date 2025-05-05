@@ -107,12 +107,18 @@
   font-family : "Open Sans";
 }
 
-
-.addToCartContainer {
+.addToCartContainerProduct{
   display: flex;
   flex: 0.3;
   flex-direction: row;
   width: 70%;
+  font-family : "Open Sans";
+}
+.addToCartContainer {
+  display: flex;
+  flex: 0.3;
+  flex-direction: row;
+  width: 100%;
   font-family : "Open Sans";
 }
 

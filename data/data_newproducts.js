@@ -1,6 +1,6 @@
 export const newproducts = [
   {
-    id: "cheie_fixa",
+    id: "chei_fixe",
     image: "../images/cheie_fixa.png",
     name: "Cheie fixa",
     favorite: false,
@@ -8,21 +8,21 @@ export const newproducts = [
   }
   ,
   {
-    id: "cheie_inelara",
+    id: "chei_inelara",
     image: "../images/cheie_inelara.png",
     name: "Cheie inelara",
     favorite: false,
     keywords: []
   },
   {
-    id: "coasa",
+    id: "coase",
     image: "../images/coasa.png",
     name: "Coasa",
     favorite: false,
     keywords: []
   },
   {
-    id: "pila",
+    id: "pile",
     image: "../images/pila.png",
     name: "Pila",
     favorite: false,
@@ -37,7 +37,7 @@ export const newproducts = [
     keywords: []
   },
   {
-    id: "surubelnita",
+    id: "surubelnite",
     image: "../images/surubelnita.png",
     name: "Surubelnita",
     favorite: false,

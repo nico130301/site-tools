@@ -10,7 +10,6 @@ const observer = new MutationObserver(() => {
   observer.disconnect();
   // Categories List
 
-  let d = '';
   let categoriesListHTML = '';
   products_categories.forEach((categoryList) => {
     categoriesListHTML += `
@@ -48,7 +47,7 @@ const observer = new MutationObserver(() => {
             <div class="productId">${product.idNumber}</div>
             <div class="productName">${product.name}</div>
             <div class="productDescription">${product.description}</div>
-            <div class="addToCartContainer">
+            <div class="addToCartContainerProduct">
               <div class="addtoCartButtonContainer">
                 <button class="addCartButton" data-name="${product.name}" data-image="${product.image}">
                   Add to Cart
@@ -89,7 +88,7 @@ const observer = new MutationObserver(() => {
         productsList.forEach((relatedCheck) => {
           if (relatedCheck.id === relatedId) {
             relatedProducts.innerHTML += `
-              <div class="relatedProduct">
+              <div class="relatedProduct" id="${relatedCheck.id}"onclick="location.href='../../html/productPage/product1.html'">
                   <div class="relatedProductFavoriteContainer">
                     <i class="relatedProductFavoriteIcon fa-regular fa-heart"></i>
                   </div>
@@ -115,18 +114,29 @@ const observer = new MutationObserver(() => {
     } 
   });
 
+  relatedProducts.addEventListener('click', (event) => {
+    const productElement = event.target.closest('.relatedProduct');
+    if (productElement) {
+        const productId = productElement.getAttribute('id');
+        console.log('Product clicked:', productId);
+        productClicked.id = productId;
+        localStorage.setItem('productClicked', JSON.stringify(productClicked));
+    }
+  });
+
   // FAVORITE BUTTON
 
-    const favoriteIcons = document.querySelectorAll('.relatedProductFavoriteIcon');
-
-    favoriteIcons.forEach(icon => {
-      icon.addEventListener('click', function () {
-        this.classList.toggle('fa-regular');
-        this.classList.toggle('fa-solid');
+  const favoriteIcons = document.querySelectorAll('.productFavoriteIcon');
   
-      this.style.color = this.classList.contains('fa-solid') ? 'red' : 'black';
-      });
+  favoriteIcons.forEach(icon => {
+    icon.addEventListener('click', function (event) {
+      event.stopPropagation();
+      this.classList.toggle('fa-regular');
+      this.classList.toggle('fa-solid');
+
+    this.style.color = this.classList.contains('fa-solid') ? 'red' : 'black';
     });
+  });
 
   // ADD TO CART BUTTON
 
@@ -138,8 +148,8 @@ const observer = new MutationObserver(() => {
 
   const buttons = document.querySelectorAll('.addCartButton');
   buttons.forEach(button => {
-    button.addEventListener('click', function () {
-
+    button.addEventListener('click', function (event) {
+      event.stopPropagation();
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
       const name = button.dataset.name;
